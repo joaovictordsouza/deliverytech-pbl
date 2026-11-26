@@ -39,7 +39,7 @@ public class PedidoController {
 
         if (quantidade < 1 || quantidade > 20) {
             return ResponseEntity.badRequest()
-                    .body(new Erro("A quantidade deve estar entre 1 e 20"));
+                    .body(new Erro("A quantidade deve estar entre 1 e 20."));
         }
 
         BigDecimal total = PRECO.multiply(BigDecimal.valueOf(quantidade));
