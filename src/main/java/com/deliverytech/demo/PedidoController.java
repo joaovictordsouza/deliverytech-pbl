@@ -28,11 +28,6 @@ public class PedidoController {
         return ResponseEntity.ok("OK");
     }
 
-    @GetMapping("/health")
-    public ResponseEntity<String> health() {
-        return ResponseEntity.ok("OK");
-    }
-
     @PostMapping("/calcular")
     public ResponseEntity<?> calcular(@RequestBody Pedido pedido) {
         int quantidade = pedido.quantidade();
